@@ -12,6 +12,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Update this with your actual Vercel domain
+const allowedOrigins = [
+  'http://localhost:3000', // For local development
+  'https://portfolio-builder-chi-inky.vercel.app', // REPLACE WITH YOUR ACTUAL VERCEL URL
+  // Add your custom domain here if you have one later (e.g., 'https://www.myportfoliocraft.com')
+];
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/ai-app-builder')
   .then(() => console.log("MongoDB Connected"))
