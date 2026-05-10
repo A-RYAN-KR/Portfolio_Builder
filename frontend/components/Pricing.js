@@ -8,6 +8,7 @@ export default function Pricing() {
   const [loading, setLoading] = useState(false);
 
   const handlePayment = async (plan, price) => {
+    console.log(`Initiating payment for ${plan} plan: ₹${price}`);
     const token = localStorage.getItem('token');
     if (!token) {
       toast.error("Please login first to purchase a plan.");
@@ -86,7 +87,7 @@ export default function Pricing() {
       <p className="section-subtitle">Choose the perfect plan for your needs</p>
       
       <div className="pricing-grid" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginTop: '3rem', flexWrap: 'wrap' }}>
-        <div className="pricing-card" style={{ background: '#1e1e1e', padding: '2rem', borderRadius: '1rem', border: '1px solid #333', textAlign: 'center', width: '300px' }}>
+        <div className="pricing-card" style={{ background: '#1e1e1e', padding: '2rem', borderRadius: '1rem', border: '1px solid #333', textAlign: 'center', width: '300px', position: 'relative', zIndex: 1 }}>
           <h3 style={{ color: '#fff', fontSize: '1.5rem', marginBottom: '1rem' }}>Basic</h3>
           <p style={{ color: '#aaa', fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>₹99<span style={{ fontSize: '1rem', fontWeight: 'normal' }}>/month</span></p>
           <ul style={{ color: '#ccc', listStyle: 'none', padding: 0, marginBottom: '2rem', textAlign: 'left' }}>
@@ -102,7 +103,7 @@ export default function Pricing() {
           </button>
         </div>
 
-        <div className="pricing-card" style={{ background: '#1e1e1e', padding: '2rem', borderRadius: '1rem', border: '1px solid #3b82f6', textAlign: 'center', width: '300px', transform: 'scale(1.05)' }}>
+        <div className="pricing-card" style={{ background: '#1e1e1e', padding: '2rem', borderRadius: '1rem', border: '1px solid #3b82f6', textAlign: 'center', width: '300px', transform: 'scale(1.05)', position: 'relative', zIndex: 2 }}>
           <h3 style={{ color: '#fff', fontSize: '1.5rem', marginBottom: '1rem' }}>Pro</h3>
           <p style={{ color: '#aaa', fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>₹299<span style={{ fontSize: '1rem', fontWeight: 'normal' }}>/month</span></p>
           <ul style={{ color: '#ccc', listStyle: 'none', padding: 0, marginBottom: '2rem', textAlign: 'left' }}>
