@@ -1,0 +1,15 @@
+John Doe
+Full Stack Developer
+
+Bio:
+Passionate developer with 5 years of experience in React and Node.js.
+
+Skills:
+React, Node.js, Next.js, WebContainers
+
+Experience:
+Google - Senior Developer (2020-Present)
+Built scalable web apps.
+
+Education:
+MIT - BS Computer Science (2016-2020)
